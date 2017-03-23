@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+
+</head>
+
+<body>
+    <table class="table table-striped table-bordered table-hover">
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th colspan="18" class="text-center">
+                <ul id="_page" class="pagination pagination-sm">
+                    <li>
+                        <a title="Go to first page">first</a>
+                    </li>
+                    <li>
+                        <a title="Go to previous page">pre</a>
+                    </li>
+                    <li>
+                        <a id="fir" title="Go to page 1">1</a>
+                    </li>
+                    <li>
+                        <a id="sec" title="Go to page 2">2</a>
+                    </li>
+                    <li>
+                        <a title="Go to next page">next</a>
+                    </li>
+                    <li>
+                        <a title="Go to last page">last</a>
+                    </li>
+                </ul>
+            </th>
+        </tr>
+    </table>
+</body>
+<script>
+    $(function() {
+        url = "demo.json";
+        $("#sec").bind("click", function() {
+            $.ajax({
+                type: "GET",
+                dataType: "json",
+                url: url,
+                success: function(rel) {
+                    console.log(rel)
+                    $("td").text(rel.num2);
+                },
+                error: function(err) {
+                    console.log("fail");
+                    console.log(err);
+                }
+            });
+
+        });
+    });
+</script>
+
+</html>
